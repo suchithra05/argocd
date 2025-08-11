@@ -10,7 +10,7 @@ print("🔧 REDIS_HOST:", redis_host)
 print("📝 APP_TITLE:", app_title)
 
 app = Flask(__name__, template_folder='../templates')
-r = redis.Redis(host=redis_host, port=6379)
+r = redis.Redis(host=redis, port=6379)
 
 @app.route('/')
 def index():

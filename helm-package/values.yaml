@@ -1,0 +1,13 @@
+votingApp:
+  image: suchithra05/voting-app:latest
+  replicas: 1
+  serviceType: NodePort
+  nodePort: 30007
+  containerPort: 8080
+  appTitle: "Vote for Your Favorite!"
+  redisHost: redis
+
+redis:
+  image: redis:7.2
+  replicas: 1
+  servicePort: 6379
